@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* общий класс обертки с адаптивным паддингом по бокам */
+.wrapper {
+    max-width: 1200px;
+    padding: 0;
+    margin: 0 auto;
+}
+
+.header-wrapper {
+    height: 200px;
+    padding: 30px 0 28px;
+}
+
+.header-logo {
+    width: 73.2px;
+    height: 105px;
+}
+
+.tea-plantation-image {
+    width: 100%;
+}
+
+@media (max-width: 1000px) {
+    .wrapper {
+        padding: 0 64px;
+    }
+}
+
+@media (max-width: 767px) {
+    .wrapper {
+        padding: 0 32px;
+    }
+}
