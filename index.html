@@ -5,23 +5,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@400&family=Open+Sans:wght@400&display=swap"
+        rel="stylesheet">
     <title>TEA</title>
 </head>
 
 <body>
     <header>
         <div class="header-wrapper wrapper">
+            <div class="drop-down-menu-btn-wrapper">
+                <button class="drop-down-menu-btn">
+                    <img src="assets/icons/drop-down-menu-icon.svg" alt="Drop down menu icon">
+                </button>
+            </div>
             <div class="header-logo">
                 <a href="/">
-                    <img src="assets/logos/tea-luxe-logo.svg" alt="Логотип магазина">
+                    <img src="assets/logos/tea-luxe-logo.svg" alt="Store logo">
                 </a>
             </div>
-            <nav>
-                
+            <nav class="tea-sorts">
+                <ul>
+                    <li><a href="">Black</a></li>
+                    <li><a href="">Green</a></li>
+                    <li><a href="">White</a></li>
+                    <li><a href="">Oolong</a></li>
+                    <li><a href="">Pu-erh</a></li>
+                </ul>
             </nav>
+            <div class="toolbar">
+                <div class="user-actions">
+                    <button>
+                        <img src="assets/icons/cart-icon.svg" alt="Cart icon">
+                    </button>
+                    <button>
+                        <img src="assets/icons/profile-icon.svg" alt="Profile icon">
+                    </button>
+                </div>
+                <button>
+                    <img src="assets/icons/find-icon.svg" alt="Find icon">
+                </button>
+            </div>
         </div>
         <div class="tea-intro">
-            <img class="tea-plantation-image" src="assets/tea-plantation-image.jpg" alt="Чайные поля">
+            <picture>
+                <img class="tea-plantation-image" src="assets/tea-plantation-image.jpg" alt="Tea plantation">
+            </picture>
+            <div class="tea-intro-text-overlay">
+                <div class="tea-intro-text-wrapper">
+                    <p class="first">A cup of tea is a moment of calm in the chaos of life</p>
+                    <p class="second">Wide selection of high-quality teas from all over the world, carefully curated by
+                        tea experts.</p>
+                </div>
+            </div>
         </div>
     </header>
     <main class="wrapper">
@@ -32,6 +67,8 @@
     <footer class="wrapper">
 
     </footer>
+
+    <script src="scripts/drop-down-menu.js" defer></script>
 </body>
 
 </html>

@@ -1,3 +1,9 @@
+:root {
+    --font-family: "Open Sans", sans-serif;
+    --second-family: "Cormorant", sans-serif;
+    --third-family: "IM FELL Great Primer SC", sans-serif;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -17,25 +23,150 @@ body {
 .header-wrapper {
     height: 200px;
     padding: 30px 0 28px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.drop-down-menu-btn-wrapper {
+    display: none;
+    margin: auto 0;
+}
+
+.drop-down-menu-btn-wrapper button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
 }
 
 .header-logo {
     width: 73.2px;
-    height: 105px;
+    height: 142px;
+    margin: auto 0;
+}
+
+.tea-sorts {
+    position: relative;
+    margin: auto auto;
+    width: 582px;
+}
+
+.tea-sorts ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+}
+
+.tea-sorts a {
+    text-decoration: none;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 18px;
+    color: #151618;
+}
+
+.tea-sorts.show {
+    position: absolute;
+    display: block;
+    position: absolute;
+    background-color: rgb(212, 83, 83);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 180px;
+}
+
+.toolbar button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.tea-intro {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
 }
 
 .tea-plantation-image {
     width: 100%;
+    min-width: 1599px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.tea-intro-text-overlay {
+    max-width: 1200px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.tea-intro-text-wrapper {
+    max-width: 1200px;
+    width: 100%;
+}
+
+.tea-intro .first {
+    max-width: 790px;
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 100%;
+    color: #fff;
+    margin: 0;
+}
+
+.tea-intro .second {
+    max-width: 558px;
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 24px;
+    color: #fff;
+    margin: 20px 0 48px 0;
+}
+
+@media (max-width: 1264px) {
+    .wrapper {
+        padding: 0 20px;
+    }
+
+    .tea-intro-text-overlay {
+        padding: 0 20px;
+    }
 }
 
 @media (max-width: 1000px) {
-    .wrapper {
-        padding: 0 64px;
+    .drop-down-menu-btn-wrapper {
+        display: block;
+    }
+
+    .tea-sorts {
+        display: none;
+    }
+
+    .toolbar {
+        width: 130px;
     }
 }
 
 @media (max-width: 767px) {
     .wrapper {
-        padding: 0 32px;
+        padding: 0 10px;
+    }
+
+    .tea-intro-text-overlay {
+        padding: 0 10px;
+    }
+
+    .first {
+        font-size: 40px;
     }
 }
