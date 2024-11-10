@@ -21,21 +21,26 @@ body {
 }
 
 .header-wrapper {
+    position: relative;
     height: 200px;
     padding: 30px 0 28px;
     display: flex;
     justify-content: space-between;
 }
 
-.drop-down-menu-btn-wrapper {
+.drop-down-menu-btn {
     display: none;
     margin: auto 0;
-}
-
-.drop-down-menu-btn-wrapper button {
     background-color: transparent;
     border: none;
     cursor: pointer;
+    padding: 0;
+}
+
+.drop-down-menu-btn img {
+    max-width: 100%;
+    height: auto;
+    pointer-events: none;
 }
 
 .header-logo {
@@ -53,8 +58,8 @@ body {
 .tea-sorts ul {
     list-style-type: none;
     display: flex;
-    justify-content: space-between;
-    padding: 0;
+    gap: 65px;
+    padding: 0 0 0 60px;
 }
 
 .tea-sorts a {
@@ -65,13 +70,88 @@ body {
     color: #151618;
 }
 
-.tea-sorts.show {
+.tea-sorts-drop-down-menu {
+    width: 75%;
+    display: none;
     position: absolute;
-    display: block;
-    position: absolute;
-    background-color: rgb(212, 83, 83);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
     z-index: 1000;
+    box-shadow: 0 0 0 100000px rgba(0, 0, 0, 0.5);
+}
+
+.tea-sorts-drop-down-menu.show {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.drop-down-menu-tea-sorts {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    gap: 30px;
+}
+
+.tea-sorts-drop-down-menu a {
+    text-decoration: none;
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 24px;
+    color: #000;
+}
+
+.drop-down-menu-close-btn {
+    display: flex;
+    justify-content: right;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    justify-content: right;
+    margin: 20px;
+}
+
+.drop-down-menu-divider {
+    width: 83.33%;
+    height: 2px;
+    margin: 60px auto;
+    background: #f7f2ea;
+}
+
+.drop-down-menu-feedback {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin: 0 0 60px 0;
+    gap: 30px;
+}
+
+.drop-down-menu-feedback a {
+    font-family: var(--font-family);
+    font-weight: 300;
+    font-size: 13px;
+    color: #000;
+}
+
+.drop-down-menu-toolbar {
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    background: #f7f2ea;
+    gap: 70px;
+}
+
+.drop-down-menu-toolbar button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
 }
 
 .toolbar {
@@ -85,6 +165,13 @@ body {
     background-color: transparent;
     border: none;
     cursor: pointer;
+    padding: 0;
+}
+
+.user-actions {
+    width: 58px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .tea-intro {
@@ -133,6 +220,34 @@ body {
     margin: 20px 0 48px 0;
 }
 
+.tea-exploring {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tea-meaning {
+    max-width: 704px;
+    font-family: var(--second-family);
+    font-style: italic;
+    font-weight: 300;
+    font-size: 40px;
+    text-align: center;
+    color: #151618;
+    margin: 120px 0 0 0;
+}
+
+.tea-exploring-title {
+    max-width: 370px;
+    text-align: center;
+    margin: 150px 0 0 0;
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 40px;
+    color: #151618;
+}
+
 @media (max-width: 1264px) {
     .wrapper {
         padding: 0 20px;
@@ -144,8 +259,10 @@ body {
 }
 
 @media (max-width: 1000px) {
-    .drop-down-menu-btn-wrapper {
-        display: block;
+    .drop-down-menu-btn {
+        display: flex;
+        flex-direction: column;
+        margin-right: 90px;
     }
 
     .tea-sorts {
@@ -162,11 +279,52 @@ body {
         padding: 0 10px;
     }
 
+    .header-wrapper {
+        height: 76px;
+    }
+
+    .header-logo,
+    .header-logo img {
+        height: 56px;
+        width: 39px;
+    }
+
     .tea-intro-text-overlay {
         padding: 0 10px;
     }
 
-    .first {
+    .tea-intro .first {
         font-size: 40px;
+    }
+
+    .tea-intro .second {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .tea-intro .first {
+        font-size: 24px;
+    }
+
+    .tea-intro .second {
+        font-size: 13px;
+    }
+
+    .drop-down-menu-btn {
+        margin-right: 60px;
+    }
+
+    .toolbar {
+        width: 100px;
+    }
+
+    .tea-meaning {
+        font-size: 16px;
+        margin-top: 60px;
+    }
+
+    .tea-exploring-title {
+        margin-top: 60px;
     }
 }
