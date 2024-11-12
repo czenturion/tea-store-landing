@@ -340,7 +340,6 @@ body {
 .tea-blogs {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     gap: 58px;
     margin-top: 60px;
 }
@@ -349,7 +348,11 @@ body {
     display: flex;
     gap: 20px;
     width: 542px;
+}
 
+.blog-image {
+    height: 180px;
+    width: 270px;
 }
 
 .blog-info {
@@ -372,15 +375,51 @@ body {
     font-weight: 300;
     font-size: 13px;
     color: #151618;
-    margin: 0;
+    margin: 0 0 30px 0;
 }
 
-.blog-info a {
+.blog-info-link a {
     text-decoration: none;
     font-family: var(--font-family);
     font-weight: 100;
     font-size: 13px;
     color: #151618;
+}
+
+.blog-info-link img {
+    height: 10px;
+    width: 5px;
+    margin-left: 5px;
+}
+
+.blog-view-all {
+    background: #fff;
+    border: 1px solid #151618;
+    padding: 12px 41px;
+    margin: 60px 0 0 0;
+    cursor: pointer;
+    font-family: var(--font-family);
+    font-weight: 300;
+    font-size: 20px;
+    color: #151618;
+}
+
+.subscribe {
+    background: #f7f2ea;
+    margin: 150px 0 0 0;
+}
+
+.subscribe-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.subscribe-title {
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 40px;
+    color: #151618;
+    padding: 100px 0 0 0;
 }
 
 @media (max-width: 1264px) {
@@ -394,6 +433,19 @@ body {
 
     .reviews .review:last-child {
         display: none;
+    }
+
+    .tea-blogs {
+        gap: 20px;
+    }
+
+    .blog {
+        width: 460px;
+    }
+
+    .blog-image {
+        height: 153px;
+        width: 230px;
     }
 }
 
@@ -420,6 +472,25 @@ body {
 
     .reviews .review:last-child {
         display: block;
+    }
+
+    .tea-blogs {
+        gap: 30px;
+    }
+
+    .blog {
+        width: 460px;
+    }
+
+    .blog-image {
+        height: 153px;
+        width: 230px;
+    }
+}
+
+@media (max-width: 980px) and (min-width: 580px) {
+    .blog:nth-child(even) {
+        margin-left: auto;
     }
 }
 
@@ -488,5 +559,23 @@ body {
     .reviews .review:nth-last-child(1),
     .reviews .review:nth-last-child(2) {
         display: none;
+    }
+
+    .tea-blogs {
+        width: 270px;
+    }
+
+    .blog {
+        flex-wrap: wrap;
+        width: 270px;
+    }
+
+    .blog img {
+        height: 180px;
+        width: 280px;
+    }
+
+    .blog-info-title {
+        width: 270px;
     }
 }
