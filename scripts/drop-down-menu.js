@@ -4,12 +4,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const teaSortsMenu = document.querySelector('.tea-sorts-drop-down-menu');
 
     toggleBtn.addEventListener('click', () => {
-        console.log('+++++')
         teaSortsMenu.classList.add('show');
     });
 
     closeBtn.addEventListener('click', () => {
-        console.log('-----')
         teaSortsMenu.classList.remove('show');
     })
 
