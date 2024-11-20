@@ -244,10 +244,10 @@ input[type='checkbox'] {
 
 .tea-meaning {
     max-width: 704px;
-    font-family: var(--second-family);
+    font-family: var(--font-family);
     font-style: italic;
     font-weight: 300;
-    font-size: 40px;
+    font-size: 34px;
     text-align: center;
     color: #151618;
     margin: 150px 0 0 0;
@@ -307,7 +307,7 @@ input[type='checkbox'] {
     font-weight: 400;
     font-size: 40px;
     color: #151618;
-    margin: 64px 0 0 0;
+    margin: 70px 0 0 0;
 }
 
 .reviews {
@@ -422,7 +422,7 @@ input[type='checkbox'] {
     font-weight: 300;
     font-size: 20px;
     color: #151618;
-    margin: 80px 0 0 0;
+    margin: 80px 78px 0 0;
 }
 
 .subscribe {
@@ -871,13 +871,17 @@ footer .stay-in-touch {
     }
 
     .tea-exploring-title {
-        margin-top: 135px;
+        margin-top: 138px;
         margin-left: 94px;
     }
 
     .tea-collections {
         margin-top: 40px;
         justify-content: center;
+    }
+
+    .tea-collection {
+        margin: 0 2px;
     }
 
     .tea-collection p {
@@ -907,6 +911,7 @@ footer .stay-in-touch {
     .tea-blogs {
         gap: 48px
     }
+    
 
     .blog-image {
         width: 270px;
@@ -914,7 +919,7 @@ footer .stay-in-touch {
     }
 
     .blog-info-title {
-        width: 250px;
+        width: 270px;
     }
 
     .blog-info .author {
@@ -923,6 +928,7 @@ footer .stay-in-touch {
 
     .blog-view-all {
         margin-top: 78px;
+        margin-right: 0;
     }
 
     .subscribe {
@@ -949,53 +955,78 @@ footer .stay-in-touch {
     }
 
     .subscribe-description form div:last-child {
-        justify-content: center;
+        justify-content: space-between;
     }
 
     .subscribe form .text-input {
-        width: 439px;
+        max-width: 439px;
+        width: 100%;
     }
 
     .subscribe form .text-input {
         padding: 20px 5px 3px 22px;
     }
 
-    .subscribe-description p {
-        width: 560px;
-    }
-
     .subscribe-text {
         text-align: center;
+        width: 100%;
     }
 
     .subscribe form div:first-child {
         max-width: 600px;
     }
 
+    .priorities .content-wrapper {
+        row-gap: 30px;
+    }
+
     .priorities h2 {
         margin-top: 120px;
     }
 
+    .priorities .block img {
+        margin-left: 9px;
+    }
+
     footer {
         padding-top: 50px;
+        margin-top: 116px;
     }
 
     footer .company {
         margin-left: 0;
+        margin-right: 14px;
     }
 
     footer .stay-in-touch {
         flex-direction: column;
         width: 270px;
+        gap: 50px;
     }
 
     .stay-in-touch .quote {
         margin: 0;
     }
 
+    .phone {
+        margin-top: 22px;
+    }
+
+    .mail {
+        margin-top: 10px;
+    }
+
+    .social-links {
+        margin-top: 20px;
+    }
+
+    .stay-in-touch .contacts .contacts-logo {
+        width: 60px;  
+    }
+
     .license-and-payments {
         width: 305px;
-        margin-top: 40px;
+        margin-top: 50px;
     }
 }
 
@@ -1014,6 +1045,11 @@ footer .stay-in-touch {
         width: 39px;
     }
 
+    .blog-info-title {
+        width: 100%;
+    }
+
+
     .review {
         width: 220px;
     }
@@ -1024,37 +1060,49 @@ footer .stay-in-touch {
         padding: 0 10px;
     }
 
+    .tea-intro-text-overlay {
+        padding: 0 10px;
+    }
+
     .tea-intro .first {
-        font-size: 24px;
+        font-size: 40px;
+        line-height: 48.44px;
     }
 
     .tea-intro .second {
-        font-size: 13px;
+        font-size: 24px;
+        margin-bottom: 51px;
     }
 
     .drop-down-menu-btn {
         margin-right: 60px;
     }
 
-    .toolbar {
-        width: 100px;
+    .header-logo, .header-logo img {
+        margin-left: 11px;
+    }
+
+    .shadow-overlay {
+        bottom: 5px;
     }
 
     .tea-meaning {
         font-size: 16px;
-        margin-top: 60px;
+        margin-top: 57px;
+        max-width: 376px;
     }
 
     .tea-exploring-title {
-        margin-top: 60px;
+        margin-top: 59px;
+        margin-left: 0;
     }
 
     .tea-collections {
-        margin-top: 32px;
+        margin-top: 30px;
     }
 
     .tea-collection {
-        margin: 0 -1px;
+        margin: 0 0;
     }
 
     .tea-collection p {
@@ -1071,6 +1119,7 @@ footer .stay-in-touch {
         font-size: 40px;
         color: #151618;
         margin-top: 52px;
+        margin-left: 3px;
     }
 
     .reviews {
@@ -1091,7 +1140,7 @@ footer .stay-in-touch {
 
     .tea-blogs {
         width: 460px;
-        gap: 50px;
+        gap: 49px;
     }
 
     .blog {
@@ -1109,7 +1158,7 @@ footer .stay-in-touch {
     }
 
     .tea-blog-title {
-        margin-top: 52px;
+        margin-top: 56px;
     }
 
     .blog-info .author {
@@ -1134,12 +1183,21 @@ footer .stay-in-touch {
         gap: 24px;
     }
 
-    .subscribe-description p {
-        font-family: var(--font-family);
-        font-weight: 300;
-        font-size: 13px;
+    .subscribe-description p:first-child {
         text-align: center;
-        color: #151618;
+    }
+
+    .subscribe .checkbox-input {
+        margin-right: 10px;
+    }
+
+    .subscribe-wrapper-bckgrnd-image {
+        display: none;
+    }
+
+    .subscribe-description p {
+        font-size: 13px;
+        text-align: left;
     }
 
     .priorities .content-wrapper {
@@ -1149,11 +1207,16 @@ footer .stay-in-touch {
     }
 
     .priorities h2 {
-        margin-top: 60px;
+        margin-top: 62px;
+        margin-left: 5px;
+    }
+
+    .priorities .block:last-child {
+        margin-top: -9px;
     }
 
     footer {
-        margin-top: 50px;
+        margin-top: 54px;
         padding-top: 50px;
     }
 
@@ -1184,11 +1247,16 @@ footer .stay-in-touch {
         flex-wrap: wrap;
         gap: 50px;
         width: 100%;
+        margin-top: 4px;
     }
 
     .stay-in-touch .contacts {
         gap: 27px;
         margin-left: 20px;
+    }
+
+    .phone-and-mail {
+        margin-top: -5px;
     }
 
     .mail {
@@ -1213,11 +1281,12 @@ footer .stay-in-touch {
     }
 
     .social-links {
-        margin: 20px 0 0 29px;
+        margin: 19px 0 0 28px;
     }
 
     .license-and-payments {
         margin-top: 35px;
+        width: 100%;
     }
 
     .payments {
