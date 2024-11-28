@@ -76,19 +76,27 @@ input[type='checkbox'] {
 
 .tea-sorts-drop-down-menu {
     width: 75%;
-    display: none;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
     background: #fff;
     z-index: 1000;
     box-shadow: 0 0 0 100000px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transform: translateX(-50%) translateY(-20px);
+    transition: opacity 1s ease, transform 1s ease;
 }
 
 .tea-sorts-drop-down-menu.show {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+.tea-sorts-drop-down-menu:not(.show) {
+    pointer-events: none;
 }
 
 .drop-down-menu-tea-sorts {
@@ -111,7 +119,6 @@ input[type='checkbox'] {
 
 .drop-down-menu-close-btn {
     display: flex;
-    justify-content: right;
     background-color: transparent;
     border: none;
     cursor: pointer;
@@ -1060,6 +1067,10 @@ footer .stay-in-touch {
         padding: 0 10px;
     }
 
+    .toolbar {
+        width: 100px;
+    }
+
     .tea-intro-text-overlay {
         padding: 0 10px;
     }
@@ -1138,14 +1149,14 @@ footer .stay-in-touch {
         flex-wrap: now;
     }
 
-    .tea-blogs {
-        width: 460px;
+    .tea-blogs { 
         gap: 49px;
     }
 
     .blog {
         width: 100%;
         flex-wrap: wrap;
+        justify-content: center;
     }
 
     .blog-image {
