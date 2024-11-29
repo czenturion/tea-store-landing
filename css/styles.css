@@ -84,7 +84,7 @@ input[type='checkbox'] {
     box-shadow: 0 0 0 100000px rgba(0, 0, 0, 0.5);
     opacity: 0;
     transform: translateX(-50%) translateY(-20px);
-    transition: opacity 1s ease, transform 1s ease;
+    transition: opacity .3s ease, transform .3s ease;
 }
 
 .tea-sorts-drop-down-menu.show {
@@ -122,8 +122,8 @@ input[type='checkbox'] {
     background-color: transparent;
     border: none;
     cursor: pointer;
-    justify-content: right;
     margin: 20px;
+    margin-left: auto;
 }
 
 .drop-down-menu-divider {
@@ -1090,7 +1090,7 @@ footer .stay-in-touch {
     }
 
     .header-logo, .header-logo img {
-        margin-left: 11px;
+        margin-left: 0;
     }
 
     .shadow-overlay {
